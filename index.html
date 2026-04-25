@@ -33,11 +33,27 @@
 
   #top-panel {
     top: 12px; left: 12px; right: 12px;
-    display: flex; flex-direction: column; gap: 10px;
+    display: flex; flex-direction: column; gap: 8px;
   }
   #top-panel .row {
     display: flex; justify-content: space-between; align-items: center; gap: 10px;
     flex-wrap: nowrap;
+  }
+  /* スタッツは均等に3つ並べる */
+  .stats-row .stats {
+    display: flex; gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  /* ボタン行は4ボタンを均等に */
+  .buttons-row .btn-group {
+    display: flex; gap: 6px;
+    width: 100%;
+    justify-content: stretch;
+  }
+  .buttons-row .btn-group > button {
+    flex: 1;
+    min-width: 0;
   }
   #top-panel .row .stats { flex-shrink: 1; min-width: 0; }
   .stats { display: flex; gap: 18px; }
@@ -66,7 +82,7 @@
   .toggle-btn {
     background: rgba(100, 181, 246, 0.15);
     border: 1px solid rgba(100, 181, 246, 0.35);
-    padding: 8px 10px; font-size: 12px;
+    padding: 10px 8px; font-size: 12px;
     color: #90caf9;
     border-radius: 8px;
     white-space: nowrap;
@@ -327,12 +343,14 @@
 <div id="canvas-container"></div>
 
 <div id="top-panel" class="panel">
-  <div class="row">
+  <div class="row stats-row">
     <div class="stats">
       <div class="stat"><span>スコア</span><b id="score">0</b></div>
       <div class="stat"><span>最大タイル</span><b id="max">2</b></div>
       <div class="stat"><span>時間</span><b id="timer">00:00</b></div>
     </div>
+  </div>
+  <div class="row buttons-row">
     <div class="btn-group">
       <button id="invertBtn" class="toggle-btn active" title="回転方向の反転">↻</button>
       <button id="recordsBtn" class="toggle-btn">記録</button>
