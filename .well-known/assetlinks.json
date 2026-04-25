@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.sukoyakastudio.cube2048",
+      "sha256_cert_fingerprints": [
+        "07:57:03:3B:75:99:B6:63:67:A9:4F:60:80:F5:53:C3:B0:CD:33:06:13:F5:12:C5:F6:29:50:86:78:65:67:47"
+      ]
+    }
+  }
+]
