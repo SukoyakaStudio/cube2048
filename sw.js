@@ -1,6 +1,6 @@
 // Cube 2048 Service Worker
 // バージョンを変えるとキャッシュ更新される
-const CACHE_NAME = 'cube2048-v1';
+const CACHE_NAME = 'cube2048-v1.1';
 const ASSETS = [
   './',
   './index.html',
